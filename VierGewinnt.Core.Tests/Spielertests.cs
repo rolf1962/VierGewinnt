@@ -18,10 +18,9 @@ namespace VierGewinnt.Core.Tests
             var initialCount = spielsteine.Count;
             var testTarget = new Spieler("Foo", spielsteine);
 
-            //var spalte = new Spalte();
-            testTarget.SpieleZug(/*spalte*/new SpalteMock());
+            var spalte = new Spalte();
 
-            Assert.AreEqual(initialCount - 1, testTarget.Spielsteine.Count);
+            Assert.ThrowsException<NotImplementedException>(() => testTarget.SpieleZug(spalte));
         }
 
         [TestMethod]
