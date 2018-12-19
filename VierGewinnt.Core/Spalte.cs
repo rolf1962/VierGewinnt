@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace VierGewinnt.Core
 {
-    public class Spalte
+    public class Spalte : ISpalte
     {
         private readonly IReadOnlyList<Platz> _plätze;
 

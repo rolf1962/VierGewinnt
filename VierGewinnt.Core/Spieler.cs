@@ -33,7 +33,7 @@ namespace VierGewinnt.Core
             }
         }
 
-        public void SpieleZug(Spalte spalte)
+        public void SpieleZug(ISpalte spalte)
         {
             if (spalte == null) throw new ArgumentNullException(nameof(spalte));
 
