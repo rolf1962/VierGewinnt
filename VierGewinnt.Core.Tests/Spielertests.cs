@@ -12,8 +12,8 @@ namespace VierGewinnt.Core.Tests
         {
             var spielsteine = new List<Spielstein>()
             {
-                new Spielstein(),
-                new Spielstein()
+                new Spielstein(new Farbe(128,0,0), "Foo"),
+                new Spielstein(new Farbe(128,0,0), "Foo")
             };
             var initialCount = spielsteine.Count;
             var testTarget = new Spieler("Foo", spielsteine);
@@ -29,9 +29,10 @@ namespace VierGewinnt.Core.Tests
         {
             var spielsteine = new List<Spielstein>()
             {
-                new Spielstein(),
-                new Spielstein()
+                new Spielstein(new Farbe(128,0,0), "Foo"),
+                new Spielstein(new Farbe(128,0,0), "Foo")
             };
+
             var testTarget = new Spieler("Foo", spielsteine);
             var spalteMock = new SpalteMock();
 

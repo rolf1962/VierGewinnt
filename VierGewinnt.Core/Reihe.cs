@@ -2,8 +2,10 @@
 
 namespace VierGewinnt.Core
 {
-    public class Reihe
+    public class Reihe : Linie
     {
-        private readonly IReadOnlyList<Platz> _plätze;
+        public Reihe(IReadOnlyList<Platz> plätze) : base(plätze)
+        {
+        }
     }
 }

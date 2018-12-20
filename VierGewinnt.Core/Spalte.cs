@@ -3,9 +3,11 @@ using System.Collections.Generic;
 
 namespace VierGewinnt.Core
 {
-    public class Spalte : ISpalte
+    public class Spalte : Linie, ISpalte
     {
-        private readonly IReadOnlyList<Platz> _plätze;
+        public Spalte(IReadOnlyList<Platz> plätze) : base(plätze)
+        {
+        }
 
         public void LasseSpielsteinFallen(Spielstein spielstein)
         {
