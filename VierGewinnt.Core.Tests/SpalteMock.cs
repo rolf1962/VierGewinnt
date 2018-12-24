@@ -13,5 +13,7 @@
         {
             get { return _anzahlLasseSpielsteinFallenAufrufe == 1; }
         }
+
+        public bool IstSpalteVoll { get { throw new System.NotSupportedException(); } }
     }
 }

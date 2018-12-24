@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace VierGewinnt.Core
 {
@@ -11,7 +12,21 @@ namespace VierGewinnt.Core
 
         public void LasseSpielsteinFallen(Spielstein spielstein)
         {
-            throw new NotImplementedException();
+            foreach(var platz in Plätze)
+            {
+                if(platz.Spielstein==null)
+                {
+                    platz.Spielstein = spielstein;
+                    return;
+                }
+
+                throw new InvalidOperationException("Die Spalte ist bereits voll");
+            }
+        }
+
+        public bool IstSpalteVoll
+        {
+            get { return Plätze.All(platz => platz.Spielstein != null); }
         }
     }
 }

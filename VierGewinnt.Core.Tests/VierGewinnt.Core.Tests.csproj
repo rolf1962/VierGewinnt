@@ -52,6 +52,7 @@
     <Compile Include="LinienDummy.cs" />
     <Compile Include="Linientests.cs" />
     <Compile Include="SpalteMock.cs" />
+    <Compile Include="Spaltentests.cs" />
     <Compile Include="Spielertests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
