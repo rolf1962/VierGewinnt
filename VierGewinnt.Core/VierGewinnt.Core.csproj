@@ -51,6 +51,7 @@
     <Compile Include="Spiel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Spielbrett.cs" />
+    <Compile Include="SpielbrettFactory.cs" />
     <Compile Include="Spieler.cs" />
     <Compile Include="Spielstein.cs" />
   </ItemGroup>
