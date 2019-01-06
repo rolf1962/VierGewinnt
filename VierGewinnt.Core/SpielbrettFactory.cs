@@ -46,14 +46,101 @@ namespace VierGewinnt.Core
             {
                 var reihenPlätze = new List<Platz>();
 
-                // Video: 12:48
-
+                for (int i = 0; i < spaltenAnzahl; i++)
+                {
+                    reihenPlätze.Add(plätze[i][j]);
+                }
                 reihen.Add(new Reihe(reihenPlätze));
             }
 
             // Diagonalen 
+            var diagonalen = new List<Diagonale>();
+
+            // Diagonalen von links oben nach rechts unten
+
+            for (int i = 0; i < spaltenAnzahl; i++)
+            {
+                int spaltenIndex = i;
+                int reihenIndex = 0;
+
+                var diagonalenPlätze = new List<Platz>();
+
+                while (spaltenIndex < spaltenAnzahl && reihenIndex < reihenAnzahl)
+                {
+                    diagonalenPlätze.Add(plätze[spaltenIndex][reihenIndex]);
+                    spaltenIndex++;
+                    reihenIndex++;
+                }
+
+                if (diagonalenPlätze.Count >= 4)
+                {
+                    diagonalen.Add(new Diagonale(diagonalenPlätze));
+                }
+            }
+
+            for (int j = 1; j < reihenAnzahl; j++)
+            {
+                int spaltenIndex = 0;
+                int reihenIndex = j;
+
+                var diagonalenPlätze = new List<Platz>();
+
+                while (spaltenIndex < spaltenAnzahl && reihenIndex < reihenAnzahl)
+                {
+                    diagonalenPlätze.Add(plätze[spaltenIndex][reihenIndex]);
+                    spaltenIndex++;
+                    reihenIndex++;
+                }
+
+                if (diagonalenPlätze.Count >= 4)
+                {
+                    diagonalen.Add(new Diagonale(diagonalenPlätze));
+                }
+            }
+
+            // Diagnalen von rechts oben nach links unten
+            for (int i = 0; i < spaltenAnzahl; i++)
+            {
+                int spaltenIndex = i;
+                int reihenIndex = 0;
+
+                var diagonalenPlätze = new List<Platz>();
+
+                while (spaltenIndex >= 0 && reihenIndex < reihenAnzahl)
+                {
+                    diagonalenPlätze.Add(plätze[spaltenIndex][reihenIndex]);
+                    spaltenIndex--;
+                    reihenIndex++;
+                }
+
+                if (diagonalenPlätze.Count >= 4)
+                {
+                    diagonalen.Add(new Diagonale(diagonalenPlätze));
+                }
+            }
+
+            for(int j = 1; j < reihenAnzahl; j++)
+            {
+                int spaltenIndex = spaltenAnzahl - 1;
+                int reihenIndex = j;
+
+                var diagonalenPlätze = new List<Platz>();
+
+                while (spaltenIndex >= 0 && reihenIndex < spaltenAnzahl)
+                {
+                    diagonalenPlätze.Add(plätze[spaltenIndex][reihenIndex]);
+                    spaltenIndex--;
+                    reihenIndex++;
+                }
+
+                if (diagonalenPlätze.Count >= 4)
+                {
+                    diagonalen.Add(new Diagonale(diagonalenPlätze));
+                }
+            }
 
             // Spielbrett initialisieren
+            return new Spielbrett(plätze, reihen, spalten, diagonalen);
         }
     }
 }
