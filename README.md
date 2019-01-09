@@ -7,7 +7,7 @@ Zu dieser Entwicklung gibt es auch wieder Videos, die das Nachprogrammieren erm√
 
 In diesem Repository will ich das vollst√§ndige "Vier gewinnt" nachprogrammieren.
 
-Linkliste zu den Videos:
+Links zu den Videos:
 
 - [Vier Gewinnt (1) - OOA und Aufbau der Solution](https://www.youtube.com/watch?v=w5D7r564dYQ&list=PLIMrZfX3DMVF7nLENd7R5HYFKJJBk2jZ7&t=0s&index=230)
 - [Vier Gewinnt (2) - Die Klasse Spieler erweitern](https://www.youtube.com/watch?v=kfnYUE8Glqc&list=PLIMrZfX3DMVF7nLENd7R5HYFKJJBk2jZ7&t=0s&index=231)
