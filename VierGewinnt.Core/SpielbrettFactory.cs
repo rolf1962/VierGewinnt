@@ -126,7 +126,7 @@ namespace VierGewinnt.Core
 
                 var diagonalenPlätze = new List<Platz>();
 
-                while (spaltenIndex >= 0 && reihenIndex < spaltenAnzahl)
+                while (spaltenIndex >= 0 && reihenIndex < reihenAnzahl)
                 {
                     diagonalenPlätze.Add(plätze[spaltenIndex][reihenIndex]);
                     spaltenIndex--;
