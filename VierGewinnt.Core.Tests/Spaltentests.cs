@@ -15,9 +15,9 @@ namespace VierGewinnt.Core.Tests
         {
             var plätze = new List<Platz>();
 
-            for(int i=0;i<6;i++)
+            for (int i = 0; i < 6; i++)
             {
-                plätze.Add(new Platz());
+                plätze.Add(new Platz(0, i));
             }
 
             var testTarget = new Spalte(plätze);
@@ -25,7 +25,7 @@ namespace VierGewinnt.Core.Tests
 
             testTarget.LasseSpielsteinFallen(spielstein);
 
-            for(var i=0;i<plätze.Count;i++)
+            for (var i = 0; i < plätze.Count; i++)
             {
                 if (i == 0)
                 {
@@ -46,7 +46,7 @@ namespace VierGewinnt.Core.Tests
 
             for (int i = 0; i < 6; i++)
             {
-                plätze.Add(new Platz() { Spielstein = spielstein });
+                plätze.Add(new Platz(0, i) { Spielstein = spielstein });
             }
 
             var testTarget = new Spalte(plätze);
@@ -62,7 +62,7 @@ namespace VierGewinnt.Core.Tests
 
             for (int i = 0; i < 6; i++)
             {
-                plätze.Add(new Platz());
+                plätze.Add(new Platz(0, i));
             }
 
             plätze[0].Spielstein = spielstein;
@@ -80,7 +80,7 @@ namespace VierGewinnt.Core.Tests
 
             for (int i = 0; i < 6; i++)
             {
-                plätze.Add(new Platz() { Spielstein = spielstein });
+                plätze.Add(new Platz(0, i) { Spielstein = spielstein });
             }
 
             var testTarget = new Spalte(plätze);

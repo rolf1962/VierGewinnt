@@ -22,7 +22,7 @@ namespace VierGewinnt.Core
 
                 for (var j = 0; j < reihenAnzahl; j++)
                 {
-                    plätze[i][j] = new Platz();
+                    plätze[i][j] = new Platz(i, j);
                 }
             }
 
@@ -55,9 +55,9 @@ namespace VierGewinnt.Core
 
             // Diagonalen 
             var diagonalen = new List<Diagonale>();
+            var diagonalenrichtung = Diagonalenrichtung.RechtsUnten;
 
             // Diagonalen von links oben nach rechts unten
-
             for (int i = 0; i < spaltenAnzahl; i++)
             {
                 int spaltenIndex = i;
@@ -74,7 +74,7 @@ namespace VierGewinnt.Core
 
                 if (diagonalenPlätze.Count >= 4)
                 {
-                    diagonalen.Add(new Diagonale(diagonalenPlätze));
+                    diagonalen.Add(new Diagonale(i, 0, diagonalenrichtung, diagonalenPlätze));
                 }
             }
 
@@ -94,11 +94,13 @@ namespace VierGewinnt.Core
 
                 if (diagonalenPlätze.Count >= 4)
                 {
-                    diagonalen.Add(new Diagonale(diagonalenPlätze));
+                    diagonalen.Add(new Diagonale(0, j, diagonalenrichtung, diagonalenPlätze));
                 }
             }
 
             // Diagnalen von rechts oben nach links unten
+            diagonalenrichtung = Diagonalenrichtung.LinksUnten;
+
             for (int i = 0; i < spaltenAnzahl; i++)
             {
                 int spaltenIndex = i;
@@ -115,11 +117,11 @@ namespace VierGewinnt.Core
 
                 if (diagonalenPlätze.Count >= 4)
                 {
-                    diagonalen.Add(new Diagonale(diagonalenPlätze));
+                    diagonalen.Add(new Diagonale(i, 0, diagonalenrichtung, diagonalenPlätze));
                 }
             }
 
-            for(int j = 1; j < reihenAnzahl; j++)
+            for (int j = 1; j < reihenAnzahl; j++)
             {
                 int spaltenIndex = spaltenAnzahl - 1;
                 int reihenIndex = j;
@@ -135,7 +137,7 @@ namespace VierGewinnt.Core
 
                 if (diagonalenPlätze.Count >= 4)
                 {
-                    diagonalen.Add(new Diagonale(diagonalenPlätze));
+                    diagonalen.Add(new Diagonale(spaltenAnzahl - 1, j, diagonalenrichtung, diagonalenPlätze));
                 }
             }
 

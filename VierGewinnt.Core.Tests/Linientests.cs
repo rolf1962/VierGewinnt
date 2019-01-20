@@ -15,10 +15,10 @@ namespace VierGewinnt.Core.Tests
         {
             var plätze = new List<Platz>()
             {
-                new Platz(){Spielstein=new Spielstein(new Farbe(128,0,0), "Foo")},
-                new Platz(){Spielstein=new Spielstein(new Farbe(128,0,0), "Foo")},
-                new Platz(){Spielstein=new Spielstein(new Farbe(128,0,0), "Foo")},
-                new Platz(){Spielstein=new Spielstein(new Farbe(128,0,0), "Foo")}
+                new Platz(0,0){Spielstein=new Spielstein(new Farbe(128,0,0), "Foo")},
+                new Platz(0,1){Spielstein=new Spielstein(new Farbe(128,0,0), "Foo")},
+                new Platz(0,2){Spielstein=new Spielstein(new Farbe(128,0,0), "Foo")},
+                new Platz(0,3){Spielstein=new Spielstein(new Farbe(128,0,0), "Foo")}
             };
 
             var testTarget = new LinienDummy(plätze);
@@ -33,12 +33,12 @@ namespace VierGewinnt.Core.Tests
         {
             var plätze = new List<Platz>()
             {
-                new Platz(){Spielstein=new Spielstein(new Farbe(128,0,0), "Foo")},
-                new Platz(){Spielstein=new Spielstein(new Farbe(0,128,0), "Bar")},
-                new Platz(){Spielstein=new Spielstein(new Farbe(128,0,0), "Foo")},
-                new Platz(){Spielstein=new Spielstein(new Farbe(128,0,0), "Foo")},
-                new Platz(){Spielstein=new Spielstein(new Farbe(128,0,0), "Foo")},
-                new Platz(){Spielstein=new Spielstein(new Farbe(128,0,0), "Foo")}
+                new Platz(0,0){Spielstein=new Spielstein(new Farbe(128,0,0), "Foo")},
+                new Platz(0,1){Spielstein=new Spielstein(new Farbe(0,128,0), "Bar")},
+                new Platz(0,2){Spielstein=new Spielstein(new Farbe(128,0,0), "Foo")},
+                new Platz(0,3){Spielstein=new Spielstein(new Farbe(128,0,0), "Foo")},
+                new Platz(0,4){Spielstein=new Spielstein(new Farbe(128,0,0), "Foo")},
+                new Platz(0,5){Spielstein=new Spielstein(new Farbe(128,0,0), "Foo")}
             };
 
             var testTarget = new LinienDummy(plätze);
@@ -53,12 +53,12 @@ namespace VierGewinnt.Core.Tests
         {
             var plätze = new List<Platz>()
             {
-                new Platz(){Spielstein=new Spielstein(new Farbe(128,0,0), "Foo")},
-                new Platz(){Spielstein=new Spielstein(new Farbe(0,128,0), "Bar")},
-                new Platz(){Spielstein=new Spielstein(new Farbe(128,0,0), "Foo")},
-                new Platz(){Spielstein=new Spielstein(new Farbe(128,0,0), "Foo")},
-                new Platz(),
-                new Platz()
+                new Platz(0,0){Spielstein=new Spielstein(new Farbe(128,0,0), "Foo")},
+                new Platz(0,1){Spielstein=new Spielstein(new Farbe(0,128,0), "Bar")},
+                new Platz(0,2){Spielstein=new Spielstein(new Farbe(128,0,0), "Foo")},
+                new Platz(0,3){Spielstein=new Spielstein(new Farbe(128,0,0), "Foo")},
+                new Platz(0,4),
+                new Platz(0,5)
             };
 
             var testTarget = new LinienDummy(plätze);
