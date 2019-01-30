@@ -21,5 +21,10 @@ namespace VierGewinnt.Core
         public int X => _x;
 
         public int Y => _y;
+
+        public override string ToString()
+        {
+            return $"Platz {_x}, {_y}";
+        }
     }
 }

@@ -58,10 +58,27 @@ namespace VierGewinnt.Core.Tests
             var letzterPlatz = zieldiagonale.Plätze.Last();
 
             Assert.IsTrue(ersterPlatz.X == 5 && ersterPlatz.Y == 0);
-            Assert.IsTrue(letzterPlatz.X == 0 && letzterPlatz.Y == 4);
+            Assert.IsTrue(letzterPlatz.X == 0 && letzterPlatz.Y == 5);
+        }
 
-            // Video Stop = 37:10
+        [TestMethod]
+        public void ErstelleFügtKorrektPlätzeZuRechtsUntenDiagonalen()
+        {
+            var zieldiagonale = _spielbrett.Diagonalen.First(diagonale => diagonale.DiagonalenRichtung == Diagonalenrichtung.RechtsUnten &&
+                                                          diagonale.StartIndexX == 0 &&
+                                                          diagonale.StartIndexY == 2);
 
+            var ersterPlatz = zieldiagonale.Plätze.First();
+            var letzterPlatz = zieldiagonale.Plätze.Last();
+
+            Assert.IsTrue(ersterPlatz.X == 0 && ersterPlatz.Y == 2);
+            Assert.IsTrue(letzterPlatz.X == 3 && letzterPlatz.Y == 5);
+        }
+
+        [TestMethod]
+        public void ErstelleIgnoriertDiagonalenMitWenigerAlsVierPlätzen()
+        {
+            Assert.IsTrue(_spielbrett.Diagonalen.All(diagonale => diagonale.Plätze.Count >= 4));
         }
     }
 }
