@@ -6,15 +6,18 @@ namespace VierGewinnt.Core
     public class Spieler
     {
         private readonly string _name;
-        private readonly IList<Spielstein> _spielsteine;
 
-        public Spieler(string name, IList<Spielstein> spielsteine)
+        private readonly IList<Spielstein> _spielsteine;
+        private readonly Farbe _spielerFarbe;
+
+        public Spieler(string name, IList<Spielstein> spielsteine, Farbe spielerFarbe)
         {
             if (spielsteine == null) throw new ArgumentNullException(nameof(spielsteine));
             if (string.IsNullOrWhiteSpace(name)) throw new ArgumentNullException(nameof(name));
 
             _name = name;
             _spielsteine = spielsteine;
+            _spielerFarbe = spielerFarbe;
         }
 
         public string Name
@@ -30,6 +33,14 @@ namespace VierGewinnt.Core
             get
             {
                 return _spielsteine;
+            }
+        }
+
+        public Farbe SpielerFarbe
+        {
+            get
+            {
+                return _spielerFarbe;
             }
         }
 
