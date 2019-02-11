@@ -1,5 +1,6 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:VierGewinnt.WpfClient">
-    <local:Farbconverter x:Key="Farbconverter"/>
+    <local:FarbKonverter x:Key="FarbKonverter"/>
+    <local:IstAnDerReiheZuBrushKonverter x:Key="IstAnDerReiheZuBrushKonverter"/>
 </ResourceDictionary>

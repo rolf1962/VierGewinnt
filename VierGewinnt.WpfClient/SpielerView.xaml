@@ -10,7 +10,7 @@
     <d:UserControl.DataContext>
         <sd:SpielerViewModelSamplaData/>
     </d:UserControl.DataContext>
-    <Border BorderThickness="5" BorderBrush="DarkRed">
+    <Border BorderThickness="5" BorderBrush="{Binding Converter={StaticResource IstAnDerReiheZuBrushKonverter}}">
         <Grid Margin="5">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
@@ -21,13 +21,13 @@
                        FontFamily="Segoe UI Light" 
                        FontSize="40" 
                        HorizontalAlignment="Center" 
-                       Foreground="{Binding Spieler.SpielerFarbe, Converter={StaticResource Farbconverter}}"/>
+                       Foreground="{Binding Spieler.SpielerFarbe, Converter={StaticResource FarbKonverter}}"/>
             <TextBlock Grid.Row="1" 
                        Text="{Binding Path=Spieler.Spielsteine.Count, StringFormat=\{0\} Spielsteine}" 
                        FontSize="20" 
                        HorizontalAlignment="Center" 
                        Margin="0 2"
-                       Foreground="{Binding Spieler.SpielerFarbe}"/>
+                       Foreground="{Binding Spieler.SpielerFarbe, Converter={StaticResource FarbKonverter}}"/>
             <!--Video Stop: 42 Min.-->
         </Grid>
     </Border>
