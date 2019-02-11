@@ -28,7 +28,6 @@
                        HorizontalAlignment="Center" 
                        Margin="0 2"
                        Foreground="{Binding Spieler.SpielerFarbe, Converter={StaticResource FarbKonverter}}"/>
-            <!--Video Stop: 42 Min.-->
         </Grid>
     </Border>
 </UserControl>
