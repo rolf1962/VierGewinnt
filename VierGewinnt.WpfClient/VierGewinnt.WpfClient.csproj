@@ -55,8 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Farbconverter.cs" />
-    <Compile Include="ISpielerView.cs" />
+    <Compile Include="FarbKonverter.cs" />
+    <Compile Include="ISpielerViewModel.cs" />
+    <Compile Include="IstAnDerReiheZuBrushKonverter.cs" />
     <Compile Include="SampleData\SpielerViewModelSamplaData.cs" />
     <Compile Include="SpielerView.xaml.cs">
       <DependentUpon>SpielerView.xaml</DependentUpon>

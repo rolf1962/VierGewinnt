@@ -7,7 +7,7 @@ using VierGewinnt.Core;
 
 namespace VierGewinnt.WpfClient
 {
-    public interface ISpielerView
+    public interface ISpielerViewModel
     {
         Spieler Spieler { get; }
         bool IstAnDerReihe { get; }

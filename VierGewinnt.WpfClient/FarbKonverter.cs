@@ -10,7 +10,7 @@ using VierGewinnt.Core;
 
 namespace VierGewinnt.WpfClient
 {
-    public class Farbconverter : IValueConverter
+    public class FarbKonverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {

@@ -7,13 +7,13 @@ using VierGewinnt.Core;
 
 namespace VierGewinnt.WpfClient.SampleData
 {
-    public class SpielerViewModelSamplaData : ISpielerView
+    public class SpielerViewModelSamplaData : ISpielerViewModel
     {
         private readonly Spieler _spieler;
 
         public SpielerViewModelSamplaData()
         {
-            var spielerFarbe = new Farbe(0, 0, 128);
+            var spielerFarbe = new Farbe(0, 0, 255);
             const string spielerName = "Player B";
             var spielsteine = new List<Spielstein>();
 
