@@ -6,7 +6,7 @@
              xmlns:sd="clr-namespace:VierGewinnt.WpfClient.SampleData"
              xmlns:local="clr-namespace:VierGewinnt.WpfClient"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="300" d:DesignWidth="300">
     <d:UserControl.DataContext>
         <sd:SpielerViewModelSamplaData/>
     </d:UserControl.DataContext>
