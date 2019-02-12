@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VierGewinnt.WpfClient", "VierGewinnt.WpfClient\VierGewinnt.WpfClient.csproj", "{0BDB682F-1758-4708-AFD5-875174F05027}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VierGewinnt.WpfClient.Tests", "VierGewinnt.WpfClient.Tests\VierGewinnt.WpfClient.Tests.csproj", "{CAA0359D-5973-4C35-B490-9FF62FBC291B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{0BDB682F-1758-4708-AFD5-875174F05027}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BDB682F-1758-4708-AFD5-875174F05027}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0BDB682F-1758-4708-AFD5-875174F05027}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAA0359D-5973-4C35-B490-9FF62FBC291B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAA0359D-5973-4C35-B490-9FF62FBC291B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAA0359D-5973-4C35-B490-9FF62FBC291B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAA0359D-5973-4C35-B490-9FF62FBC291B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

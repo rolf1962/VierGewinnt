@@ -62,6 +62,7 @@
     <Compile Include="SpielerView.xaml.cs">
       <DependentUpon>SpielerView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SpielerViewModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
