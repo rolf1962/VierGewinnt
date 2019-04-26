@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using VierGewinnt.Core;
 
 namespace VierGewinnt.WpfClient
 {
@@ -28,6 +29,11 @@ namespace VierGewinnt.WpfClient
         public ISpielbrettViewModel SpielbrettViewModel
         {
             get { return null; }
+        }
+
+        public string Gewinnername
+        {
+            get { throw new NotImplementedException(); }
         }
     }
 }

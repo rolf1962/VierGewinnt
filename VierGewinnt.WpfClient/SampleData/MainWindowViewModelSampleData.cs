@@ -27,5 +27,10 @@ namespace VierGewinnt.WpfClient.SampleData
         {
             get { return _spielerViewModels; }
         }
+
+        public string Gewinnername
+        {
+            get { return _spielerViewModels[0].Spieler.Name; }
+        }
     }
 }

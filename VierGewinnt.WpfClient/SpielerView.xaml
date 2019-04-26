@@ -10,7 +10,7 @@
     <d:UserControl.DataContext>
         <sd:SpielerViewModelSamplaData/>
     </d:UserControl.DataContext>
-    <Border BorderThickness="5" BorderBrush="{Binding Converter={StaticResource IstAnDerReiheZuBrushKonverter}}">
+    <Border BorderThickness="5" BorderBrush="{Binding Path=/, Converter={StaticResource IstAnDerReiheZuBrushKonverter}}">
         <Grid Margin="5">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>

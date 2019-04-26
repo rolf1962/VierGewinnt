@@ -6,24 +6,28 @@
         xmlns:local="clr-namespace:VierGewinnt.WpfClient"
         xmlns:sd="clr-namespace:VierGewinnt.WpfClient.SampleData"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1000" Width="1920"
+        Title="Vier Gewinnt" d:DesignHeight="1000" d:DesignWidth="1920"
         WindowState="Maximized">
     <d:Window.DataContext>
         <sd:MainWindowViewModelSampleData/>
     </d:Window.DataContext>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="282*"/>
-            <RowDefinition Height="37*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="129*"/>
-            <ColumnDefinition Width="253*"/>
-            <ColumnDefinition Width="135*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
         <ContentControl Grid.Row="0" Grid.Column="0" Name="playerAContentControl" 
                         Content="{Binding Path=SpielerViewModels[0]}" ContentTemplate="{StaticResource SpielerViewModelDataTemplate}"/>
         <ContentControl Grid.Row="0" Grid.Column="2" Name="playerBContentControl" 
                         Content="{Binding Path=SpielerViewModels[1]}" ContentTemplate="{StaticResource SpielerViewModelDataTemplate}"/>
+        <TextBlock Text="{Binding Gewinnername, StringFormat=\{0\} hat gewonnen}" 
+                   Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                   FontFamily="Segoe UI Light" FontSize="40"/>
     </Grid>
 </Window>
