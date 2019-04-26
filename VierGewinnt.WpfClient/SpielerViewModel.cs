@@ -24,7 +24,7 @@ namespace VierGewinnt.WpfClient
         {
             get
             {
-                throw new NotImplementedException();
+                return _spieler;
             }
         }
 
