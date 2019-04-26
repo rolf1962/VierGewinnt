@@ -56,8 +56,12 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="FarbKonverter.cs" />
+    <Compile Include="IMainWindowViewModel.cs" />
+    <Compile Include="ISpielbrettViewModel.cs" />
     <Compile Include="ISpielerViewModel.cs" />
     <Compile Include="IstAnDerReiheZuBrushKonverter.cs" />
+    <Compile Include="MainWindowViewModel.cs" />
+    <Compile Include="SampleData\MainWindowViewModelSampleData.cs" />
     <Compile Include="SampleData\SpielerViewModelSamplaData.cs" />
     <Compile Include="SpielerView.xaml.cs">
       <DependentUpon>SpielerView.xaml</DependentUpon>

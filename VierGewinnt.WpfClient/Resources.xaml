@@ -3,4 +3,7 @@
                     xmlns:local="clr-namespace:VierGewinnt.WpfClient">
     <local:FarbKonverter x:Key="FarbKonverter"/>
     <local:IstAnDerReiheZuBrushKonverter x:Key="IstAnDerReiheZuBrushKonverter"/>
+    <DataTemplate x:Key="SpielerViewModelDataTemplate" DataType="{x:Type local:ISpielerViewModel}">
+        <local:SpielerView/>
+    </DataTemplate>
 </ResourceDictionary>
