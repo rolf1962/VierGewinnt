@@ -23,6 +23,8 @@
         </Grid.ColumnDefinitions>
         <ContentControl Grid.Row="0" Grid.Column="0" Name="playerAContentControl" 
                         Content="{Binding Path=SpielerViewModels[0]}" ContentTemplate="{StaticResource SpielerViewModelDataTemplate}"/>
+        <ContentControl Grid.Row="0" Grid.Column="1" Name="gameboardContentControl"
+                        Content="{Binding Path=SpielbrettViewModel}" ContentTemplate="{StaticResource SpielbrettViewModelDataTemplate}"/>
         <ContentControl Grid.Row="0" Grid.Column="2" Name="playerBContentControl" 
                         Content="{Binding Path=SpielerViewModels[1]}" ContentTemplate="{StaticResource SpielerViewModelDataTemplate}"/>
         <TextBlock Text="{Binding Gewinnername, StringFormat=\{0\} hat gewonnen}" 

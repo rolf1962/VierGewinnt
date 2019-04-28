@@ -56,13 +56,19 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="FarbKonverter.cs" />
+    <Compile Include="IKlickSpalteCommand.cs" />
     <Compile Include="IMainWindowViewModel.cs" />
     <Compile Include="ISpielbrettViewModel.cs" />
     <Compile Include="ISpielerViewModel.cs" />
     <Compile Include="IstAnDerReiheZuBrushKonverter.cs" />
     <Compile Include="MainWindowViewModel.cs" />
     <Compile Include="SampleData\MainWindowViewModelSampleData.cs" />
+    <Compile Include="SampleData\SpielbrettViewModelSampleData.cs" />
     <Compile Include="SampleData\SpielerViewModelSamplaData.cs" />
+    <Compile Include="SpielbrettViewModel.cs" />
+    <Compile Include="SpielbrettView.xaml.cs">
+      <DependentUpon>SpielbrettView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SpielerView.xaml.cs">
       <DependentUpon>SpielerView.xaml</DependentUpon>
     </Compile>
@@ -80,6 +86,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Resources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SpielbrettView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

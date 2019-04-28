@@ -6,4 +6,7 @@
     <DataTemplate x:Key="SpielerViewModelDataTemplate" DataType="{x:Type local:ISpielerViewModel}">
         <local:SpielerView/>
     </DataTemplate>
+    <DataTemplate x:Key="SpielbrettViewModelDataTemplate" DataType="{x:Type local:ISpielbrettViewModel}">
+        <local:SpielbrettView/>
+    </DataTemplate>
 </ResourceDictionary>
