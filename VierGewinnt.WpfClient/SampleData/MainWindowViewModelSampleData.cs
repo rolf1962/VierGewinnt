@@ -6,7 +6,8 @@ namespace VierGewinnt.WpfClient.SampleData
 {
     public class MainWindowViewModelSampleData : IMainWindowViewModel
     {
-        private IReadOnlyList<ISpielerViewModel> _spielerViewModels;
+        private readonly IReadOnlyList<ISpielerViewModel> _spielerViewModels;
+        private readonly ISpielbrettViewModel _spielbrettViewModel;
 
         public MainWindowViewModelSampleData()
         {
@@ -16,11 +17,13 @@ namespace VierGewinnt.WpfClient.SampleData
                 new SpielerViewModelSamplaData("Player B", new Farbe(0, 0, 128)) { IstAnDerReihe = false }
             };
             _spielerViewModels = spielerViewModels;
+
+            _spielbrettViewModel = new SpielbrettViewModelSampleData();
         }
 
         public ISpielbrettViewModel SpielbrettViewModel
         {
-            get { return null; }
+            get { return _spielbrettViewModel; }
         }
 
         public IReadOnlyList<ISpielerViewModel> SpielerViewModels
