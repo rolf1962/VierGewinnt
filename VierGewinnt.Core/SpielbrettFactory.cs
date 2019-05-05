@@ -37,7 +37,7 @@ namespace VierGewinnt.Core
                     spaltenPlätze.Add(plätze[i][j]);
                 }
 
-                spalten.Add(new Spalte(spaltenPlätze));
+                spalten.Add(new Spalte(i, spaltenPlätze));
             }
 
             // Reihen 

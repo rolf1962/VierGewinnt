@@ -15,5 +15,7 @@
         }
 
         public bool IstSpalteVoll { get { throw new System.NotSupportedException(); } }
+
+        public int Index => throw new System.NotImplementedException();
     }
 }

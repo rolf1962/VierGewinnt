@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using VierGewinnt.Core;
 
 namespace VierGewinnt.WpfClient
@@ -34,6 +35,13 @@ namespace VierGewinnt.WpfClient
         public string Gewinnername
         {
             get { throw new NotImplementedException(); }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public void SpieleZug(ISpalte spalte)
+        {
+            throw new NotImplementedException();
         }
     }
 }

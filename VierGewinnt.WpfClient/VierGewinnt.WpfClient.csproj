@@ -61,6 +61,7 @@
     <Compile Include="ISpielbrettViewModel.cs" />
     <Compile Include="ISpielerViewModel.cs" />
     <Compile Include="IstAnDerReiheZuBrushKonverter.cs" />
+    <Compile Include="KlickSpalteCommand.cs" />
     <Compile Include="MainWindowViewModel.cs" />
     <Compile Include="SampleData\KlickSpalteCommandDummy.cs" />
     <Compile Include="SampleData\MainWindowViewModelSampleData.cs" />
