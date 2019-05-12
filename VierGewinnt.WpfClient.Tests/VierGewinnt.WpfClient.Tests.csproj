@@ -54,10 +54,14 @@
     <Compile Include="FarbKonverterTests.cs" />
     <Compile Include="MainWindowViewModelMock.cs" />
     <Compile Include="SpalteMock.cs" />
+    <Compile Include="SpielbrettMock.cs" />
+    <Compile Include="SpielerMock.cs" />
+    <Compile Include="SpielerViewModelMock.cs" />
     <Compile Include="SpielerViewModelTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="IstAnDerReiheZuBrushKonverterTests.cs" />
     <Compile Include="KlickSpalteCommandTests.cs" />
+    <Compile Include="MainWindowViewModelTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

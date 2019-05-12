@@ -9,7 +9,7 @@ namespace VierGewinnt.WpfClient
 {
     public interface ISpielerViewModel
     {
-        Spieler Spieler { get; }
-        bool IstAnDerReihe { get; }
+        ISpieler Spieler { get; }
+        bool IstAnDerReihe { get; set; }
     }
 }

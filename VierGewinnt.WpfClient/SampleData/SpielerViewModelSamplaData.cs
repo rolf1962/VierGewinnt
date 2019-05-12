@@ -5,7 +5,7 @@ namespace VierGewinnt.WpfClient.SampleData
 {
     public class SpielerViewModelSamplaData : ISpielerViewModel
     {
-        private readonly Spieler _spieler;
+        private readonly ISpieler _spieler;
 
         public SpielerViewModelSamplaData() : this("Player B", new Farbe(0, 0, 128))
         {
@@ -24,7 +24,7 @@ namespace VierGewinnt.WpfClient.SampleData
             IstAnDerReihe = true;
         }
 
-        public Spieler Spieler
+        public ISpieler Spieler
         {
             get
             {

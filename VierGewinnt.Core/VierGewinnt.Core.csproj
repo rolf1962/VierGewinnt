@@ -45,6 +45,8 @@
     <Compile Include="Diagonalenrichtung.cs" />
     <Compile Include="Farbe.cs" />
     <Compile Include="ISpalte.cs" />
+    <Compile Include="ISpielbrett.cs" />
+    <Compile Include="ISpieler.cs" />
     <Compile Include="Linie.cs" />
     <Compile Include="Platz.cs" />
     <Compile Include="Reihe.cs" />

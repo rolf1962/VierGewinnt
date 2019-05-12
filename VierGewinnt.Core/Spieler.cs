@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace VierGewinnt.Core
 {
-    public class Spieler
+    public class Spieler : ISpieler
     {
         private readonly string _name;
 
@@ -22,26 +22,17 @@ namespace VierGewinnt.Core
 
         public string Name
         {
-            get
-            {
-                return _name;
-            }
+            get { return _name; }
         }
 
         public IList<Spielstein> Spielsteine
         {
-            get
-            {
-                return _spielsteine;
-            }
+            get { return _spielsteine; }
         }
 
         public Farbe SpielerFarbe
         {
-            get
-            {
-                return _spielerFarbe;
-            }
+            get { return _spielerFarbe; }
         }
 
         public void SpieleZug(ISpalte spalte)

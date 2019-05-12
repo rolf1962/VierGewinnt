@@ -1,14 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace VierGewinnt.Core
 {
-    public class Spielbrett
+    public class Spielbrett : ISpielbrett
     {
         private readonly IReadOnlyList<IReadOnlyList<Platz>> _plätze;
         private readonly IReadOnlyList<Reihe> _reihen;
         private readonly IReadOnlyList<Spalte> _spalten;
         private readonly IReadOnlyList<Diagonale> _diagonalen;
+
+        private readonly IReadOnlyList<Linie> _spielbrettLinien;
 
         public Spielbrett(IReadOnlyList<IReadOnlyList<Platz>> plätze,
                           IReadOnlyList<Reihe> reihen,
@@ -24,6 +27,11 @@ namespace VierGewinnt.Core
             _reihen = reihen;
             _spalten = spalten;
             _diagonalen = diagonalen;
+
+            _spielbrettLinien = _reihen.Cast<Linie>()
+                .Concat(spalten)
+                .Concat(diagonalen)
+                .ToList();
         }
 
         public IReadOnlyList<IReadOnlyList<Platz>> Plätze
@@ -42,7 +50,7 @@ namespace VierGewinnt.Core
             }
         }
 
-        public IReadOnlyList<Spalte> Spalten
+        public IReadOnlyList<ISpalte> Spalten
         {
             get
             {
@@ -56,6 +64,19 @@ namespace VierGewinnt.Core
             {
                 return _diagonalen;
             }
+        }
+
+        public string BestimmerGewinnername()
+        {
+            foreach(var linie in _spielbrettLinien)
+            {
+                var gewinnername = linie.ÜberprüfeObEinSpielerVierInEinerReiheHat();
+                if (gewinnername != null)
+                {
+                    return gewinnername;
+                }
+            }
+            return null;
         }
     }
 }

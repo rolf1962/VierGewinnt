@@ -7,10 +7,10 @@ namespace VierGewinnt.WpfClient
 {
     public class SpielerViewModel : ISpielerViewModel, INotifyPropertyChanged
     {
-        private readonly Spieler _spieler;
+        private readonly ISpieler _spieler;
         private bool _istAnDerReihe;
 
-        public SpielerViewModel(Spieler spieler)
+        public SpielerViewModel(ISpieler spieler)
         {
             if (spieler == null)
             {
@@ -20,7 +20,7 @@ namespace VierGewinnt.WpfClient
             _spieler = spieler;
         }
 
-        public Spieler Spieler
+        public ISpieler Spieler
         {
             get
             {
